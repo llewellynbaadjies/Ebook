@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Foreigners in South Africa Won't Work — A.J. Steyn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A1118;
+    --panel:#0F1B22;
+    --pine:#173F31;
+    --pine-light:#20573F;
+    --gold:#E0A83E;
+    --gold-dim:#9C7B36;
+    --red:#B33B2C;
+    --paper:#F3EFE3;
+    --paper-dim:#C9C4B4;
+    --slate:#7E9490;
+    --hair:rgba(243,239,227,0.14);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  ::selection{background:var(--gold);color:var(--ink);}
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    letter-spacing:-0.01em;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(10,17,24,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--hair);
+  }
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 32px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .brand{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.1em;
+    color:var(--paper-dim);
+  }
+  .brand strong{color:var(--paper);}
+  .nav-cta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    background:var(--gold);
+    color:var(--ink);
+    padding:11px 20px;
+    border-radius:2px;
+    transition:transform .18s ease, background .18s ease;
+    display:inline-block;
+  }
+  .nav-cta:hover{background:#EFC067; transform:translateY(-1px);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:88px 0 96px;
+    border-bottom:1px solid var(--hair);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-20%;
+    right:-12%;
+    width:640px;
+    height:640px;
+    background:radial-gradient(circle at center, rgba(32,87,63,0.55), transparent 70%);
+    filter:blur(10px);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero-eyebrow-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:26px;
+  }
+  .hero-eyebrow-row .rule{
+    width:36px;height:1px;background:var(--gold-dim);
+  }
+  .hero h1{
+    font-size:clamp(40px, 5.6vw, 68px);
+    line-height:0.98;
+    color:var(--paper);
+  }
+  .hero h1 .accent-red{color:var(--red);}
+  .hero h1 .accent-gold{color:var(--gold);}
+  .hero .sub{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-style:italic;
+    font-size:22px;
+    color:var(--paper-dim);
+    margin-top:14px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--hair);
+  }
+  .hero .lede{
+    margin-top:24px;
+    font-size:16.5px;
+    color:var(--paper-dim);
+    max-width:46ch;
+  }
+  .hero .ctas{
+    margin-top:36px;
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  .btn-primary{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    background:var(--gold);
+    color:var(--ink);
+    padding:16px 30px;
+    border-radius:2px;
+    font-weight:500;
+    transition:transform .18s ease, box-shadow .18s ease;
+    box-shadow:0 0 0 rgba(224,168,62,0);
+  }
+  .btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(224,168,62,0.22);
+  }
+  .price-note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--slate);
+  }
+  .price-note span{color:var(--paper);}
+
+  .cover-frame{
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .cover-frame img{
+    width:100%;
+    max-width:400px;
+    border-radius:3px;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(243,239,227,0.08);
+    transform:rotate(1.4deg);
+  }
+  .cover-frame .tag{
+    position:absolute;
+    bottom:-16px;
+    left:50%;
+    transform:translateX(-50%) rotate(-2deg);
+    background:var(--ink);
+    border:1px solid var(--hair);
+    padding:9px 16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+    white-space:nowrap;
+  }
+
+  /* ---------- MARQUEE STRIP ---------- */
+  .strip{
+    border-bottom:1px solid var(--hair);
+    background:var(--panel);
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .strip-track{
+    display:inline-flex;
+    gap:0;
+    animation:scroll 34s linear infinite;
+  }
+  .strip-item{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--slate);
+    padding:14px 26px;
+    display:inline-flex;
+    align-items:center;
+    gap:26px;
+  }
+  .strip-item .dot{color:var(--gold-dim);}
+  @keyframes scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .strip-track{animation:none;}
+  }
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:96px 0;}
+  .section-head{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:end;
+    margin-bottom:52px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--hair);
+  }
+  .section-head h2{
+    font-size:clamp(28px,3.4vw,40px);
+    color:var(--paper);
+  }
+  .section-head p{
+    color:var(--slate);
+    font-size:15px;
+    max-width:42ch;
+  }
+
+  /* ---------- TOPICS ---------- */
+  .topics-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--hair);
+    border:1px solid var(--hair);
+  }
+  .topic-card{
+    background:var(--ink);
+    padding:34px 28px;
+    transition:background .2s ease;
+  }
+  .topic-card:hover{background:var(--panel);}
+  .topic-card .mark{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--gold-dim);
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    display:block;
+  }
+  .topic-card h3{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--paper);
+    margin-bottom:10px;
+  }
+  .topic-card p{
+    font-size:14px;
+    color:var(--slate);
+  }
+
+  /* ---------- SYNOPSIS ---------- */
+  .synopsis{
+    background:var(--panel);
+    border-top:1px solid var(--hair);
+    border-bottom:1px solid var(--hair);
+  }
+  .synopsis-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:70px;
+  }
+  .synopsis-grid .quote{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-style:italic;
+    font-size:26px;
+    line-height:1.35;
+    color:var(--paper);
+    border-left:2px solid var(--red);
+    padding-left:24px;
+  }
+  .synopsis-grid .body p{
+    color:var(--paper-dim);
+    font-size:15.5px;
+    margin-bottom:18px;
+  }
+  .synopsis-grid .body p:last-child{margin-bottom:0;}
+
+  /* ---------- BENCHMARK SIGNATURE ---------- */
+  .benchmark{
+    padding:100px 0;
+  }
+  .benchmark-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:30px;
+    margin-bottom:56px;
+    flex-wrap:wrap;
+  }
+  .benchmark-top h2{
+    font-size:clamp(26px,3.2vw,36px);
+  }
+  .benchmark-top p{
+    color:var(--slate);
+    font-size:14.5px;
+    max-width:38ch;
+  }
+  .gauge{
+    position:relative;
+    height:64px;
+    border:1px solid var(--hair);
+    background:linear-gradient(90deg, var(--pine) 0%, var(--pine) 38%, var(--gold-dim) 38%, var(--gold) 63%, var(--red) 100%);
+    border-radius:2px;
+    overflow:hidden;
+  }
+  .gauge::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(10,17,24,0.35) 80px);
+  }
+  .gauge-labels{
+    display:flex;
+    justify-content:space-between;
+    margin-top:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--slate);
+  }
+  .gauge-labels span{color:var(--paper-dim);}
+  .benchmark-foot{
+    margin-top:30px;
+    font-size:14px;
+    color:var(--slate);
+    max-width:70ch;
+  }
+
+  /* ---------- AUTHOR ---------- */
+  .author{
+    border-top:1px solid var(--hair);
+    border-bottom:1px solid var(--hair);
+    background:var(--panel);
+  }
+  .author-grid{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:44px;
+    align-items:start;
+  }
+  .author-mark{
+    width:100%;
+    aspect-ratio:1;
+    border:1px solid var(--hair);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-size:44px;
+    color:var(--gold);
+    background:radial-gradient(circle at 30% 20%, rgba(224,168,62,0.12), transparent 60%);
+  }
+  .author h3{
+    font-size:24px;
+    color:var(--paper);
+    margin-bottom:12px;
+  }
+  .author p{
+    color:var(--paper-dim);
+    font-size:15px;
+    max-width:64ch;
+    margin-bottom:12px;
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    text-align:center;
+    padding:120px 0;
+    position:relative;
+  }
+  .final-cta::before{
+    content:"";
+    position:absolute;
+    top:0;left:50%;
+    transform:translateX(-50%);
+    width:1px;height:60px;
+    background:linear-gradient(var(--gold), transparent);
+  }
+  .final-cta h2{
+    font-size:clamp(30px,4.4vw,52px);
+    max-width:20ch;
+    margin:0 auto 22px;
+  }
+  .final-cta p{
+    color:var(--slate);
+    max-width:50ch;
+    margin:0 auto 36px;
+    font-size:15.5px;
+  }
+
+  footer{
+    border-top:1px solid var(--hair);
+    padding:34px 0;
+  }
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .footer-grid p{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--slate);
+    letter-spacing:0.04em;
+  }
+
+  /* ---------- FOCUS / A11Y ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px){
+    .hero-grid{grid-template-columns:1fr; gap:52px;}
+    .cover-frame{order:-1;}
+    .cover-frame img{max-width:280px;}
+    .topics-grid{grid-template-columns:1fr 1fr;}
+    .synopsis-grid{grid-template-columns:1fr; gap:36px;}
+    .synopsis-grid .quote{font-size:22px;}
+    .author-grid{grid-template-columns:100px 1fr;}
+    .section-head{grid-template-columns:1fr;}
+  }
+  @media (max-width: 560px){
+    .wrap{padding:0 20px;}
+    nav{padding:16px 20px;}
+    .topics-grid{grid-template-columns:1fr;}
+    section{padding:64px 0;}
+    .benchmark-top{align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">WELLBOOKS24 <span style="color:var(--slate)">/</span> <strong>A.J. STEYN</strong></div>
+    <a class="nav-cta" href="https://www.amazon.com/foreigners-South-Africa-wont-work-ebook/dp/B0HD7S25W5" target="_blank" rel="noopener">Buy the eBook</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-eyebrow-row">
+        <span class="rule"></span>
+        <span class="eyebrow">Independent Policy Analysis · South Africa · 2025</span>
+      </div>
+      <h1>Why<br>Foreigners<br><span class="accent-gold">in South Africa</span><br><span class="accent-red">Won't Work</span></h1>
+      <p class="sub">— Legally or Illegally</p>
+      <p class="lede">A plain-language breakdown of the immigration law, labour policy and employment rules that decide who gets to work in South Africa — and why the paperwork alone can end the conversation before it starts.</p>
+      <div class="ctas">
+        <a class="btn-primary" href="https://www.amazon.com/foreigners-South-Africa-wont-work-ebook/dp/B0HD7S25W5" target="_blank" rel="noopener">Get it on Amazon →</a>
+        <div class="price-note">Kindle eBook · by <span>A.J. Steyn</span></div>
+      </div>
+    </div>
+    <div class="cover-frame">
+      <img src="cover.jpg" alt="Book cover: Why Foreigners in South Africa Won't Work — Legally or Illegally, by A.J. Steyn">
+      <div class="tag">On Amazon Kindle now</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-track">
+    <div class="strip-item"><span class="dot">●</span> Immigration Law</div>
+    <div class="strip-item"><span class="dot">●</span> BBBEE</div>
+    <div class="strip-item"><span class="dot">●</span> Employment Equity</div>
+    <div class="strip-item"><span class="dot">●</span> Minimum Wage</div>
+    <div class="strip-item"><span class="dot">●</span> Scarce Skills</div>
+    <div class="strip-item"><span class="dot">●</span> R4M Benchmark</div>
+    <div class="strip-item"><span class="dot">●</span> Immigration Law</div>
+    <div class="strip-item"><span class="dot">●</span> BBBEE</div>
+    <div class="strip-item"><span class="dot">●</span> Employment Equity</div>
+    <div class="strip-item"><span class="dot">●</span> Minimum Wage</div>
+    <div class="strip-item"><span class="dot">●</span> Scarce Skills</div>
+    <div class="strip-item"><span class="dot">●</span> R4M Benchmark</div>
+  </div>
+</div>
+
+<section class="topics">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Six frameworks, one question</h2>
+      <p>Each chapter takes a single piece of the legal and regulatory picture and lays out how it actually functions in practice.</p>
+    </div>
+    <div class="topics-grid">
+      <div class="topic-card">
+        <span class="mark">01 · Framework</span>
+        <h3>Immigration Law</h3>
+        <p>Visa categories, work permits and the criteria that determine who qualifies to be employed in South Africa at all.</p>
+      </div>
+      <div class="topic-card">
+        <span class="mark">02 · Framework</span>
+        <h3>BBBEE</h3>
+        <p>How broad-based black economic empowerment scoring shapes hiring decisions inside compliant businesses.</p>
+      </div>
+      <div class="topic-card">
+        <span class="mark">03 · Framework</span>
+        <h3>Employment Equity</h3>
+        <p>The targets and reporting obligations employers weigh before a foreign national's application reaches the shortlist.</p>
+      </div>
+      <div class="topic-card">
+        <span class="mark">04 · Framework</span>
+        <h3>Minimum Wage</h3>
+        <p>Where national wage floors intersect with sponsorship costs and who ends up carrying the difference.</p>
+      </div>
+      <div class="topic-card">
+        <span class="mark">05 · Framework</span>
+        <h3>Scarce Skills</h3>
+        <p>The official scarce-skills list — what qualifies, how it's used, and its limits as a route to legal work.</p>
+      </div>
+      <div class="topic-card">
+        <span class="mark">06 · Framework</span>
+        <h3>R4M Benchmark</h3>
+        <p>The remuneration threshold used to fast-track certain applications, and what it excludes by design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="synopsis">
+  <div class="wrap synopsis-grid">
+    <div class="quote">"The rules aren't hidden. They're just scattered across six different systems that were never built to talk to each other."</div>
+    <div class="body">
+      <p>Why Foreigners in South Africa Won't Work is an independent policy analysis, not a legal opinion or a political argument. It exists because the people asking "can I just get a job here" are usually met with six different answers from six different sources — immigration law, BBBEE codes, employment equity targets, wage regulation, the scarce-skills list, and remuneration thresholds — none of which were written with each other in mind.</p>
+      <p>A.J. Steyn walks through each framework in plain terms: what it says, how it's applied in practice, and where it quietly closes doors that look open on paper. No legal jargon left unexplained, no chapter longer than it needs to be.</p>
+    </div>
+  </div>
+</section>
+
+<section class="benchmark">
+  <div class="wrap">
+    <div class="benchmark-top">
+      <h2>Where the thresholds sit</h2>
+      <p>A simplified read of how the frameworks stack — from general labour law on the left to the highest earner exemptions on the right.</p>
+    </div>
+    <div class="gauge" role="img" aria-label="Illustrative gauge showing a spectrum of employment frameworks from general labour law to high-earner exemptions"></div>
+    <div class="gauge-labels">
+      <span>Minimum wage floor</span>
+      <span>Scarce skills list</span>
+      <span>R4M remuneration benchmark</span>
+    </div>
+    <p class="benchmark-foot">The book unpacks the reasoning behind each of these lines — and why most applicants only discover which side of them they're on after they've already made the move.</p>
+  </div>
+</section>
+
+<section class="author">
+  <div class="wrap author-grid">
+    <div class="author-mark">AJS</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:10px;">The Author</span>
+      <h3>A.J. Steyn</h3>
+      <p>A.J. Steyn writes independent policy analysis focused on South African labour and immigration systems — translating dense regulation into a straight answer for the people it actually affects.</p>
+      <p>Why Foreigners in South Africa Won't Work is published by Wellbooks24.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Read the full analysis</h2>
+    <p>Available now as a Kindle eBook. Six frameworks, one straight answer, no legal degree required.</p>
+    <a class="btn-primary" href="https://www.amazon.com/foreigners-South-Africa-wont-work-ebook/dp/B0HD7S25W5" target="_blank" rel="noopener">Get it on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <p>© 2025 A.J. STEYN / WELLBOOKS24</p>
+    <p>INDEPENDENT POLICY ANALYSIS · SOUTH AFRICA</p>
+  </div>
+</footer>
+
+</body>
+</html>
